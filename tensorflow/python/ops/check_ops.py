@@ -1947,6 +1947,17 @@ def is_strictly_increasing(x, name=None):
 
   See also:  `is_non_decreasing`
 
+  Usage Example:
+   >>>import tensorflow as tf
+   >>>tensor1 = [0, 1, 2, 3, 4, 5]
+   >>>tensor2 = [2, 3, 4, 1, 5, 2]
+   >>>t1Increasing = tf.math.is_strictly_increasing(tensor1, name='checkT1')
+   >>>t2Increasing = tf.math.is_strictly_increasing(tensor2, name='checkT2')
+   >>>print(t1Increasing)
+   tf.Tensor(True, shape=(), dtype=bool)
+   >>>print(t2Increasing)
+   tf.Tensor(False, shape=(), dtype=bool)
+
   Args:
     x: Numeric `Tensor`.
     name: A name for this operation (optional).
